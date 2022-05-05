@@ -1,0 +1,41 @@
+---
+title: GreenEarth - Articles
+articles: active
+description: ART OF GARDENING
+banner: articles-hero
+layout: base.njk
+---
+
+
+<!-- Banner Imange -->
+{% include 'pages-banner.njk' %}
+
+
+<div class="container mt-5">
+
+    {%- for post in collections.post | reverse -%}
+
+        <div class="row text-start align-items-center gy-5 my-4">
+      
+
+      <div class="col-12 col-md-3">
+        <img class="img-fluid" src="{{ post.data.image }}" alt="">
+      </div>
+
+
+      <div class="col-12 col-md-9">
+        <h1 class="mb-3" style="color: #519259;">{{ post.data.title }}</h1>
+        <p class="mb-4 snippet__meta">by <span>{{post.data.author}}</span> on <span>{{ post.date | postDate }}</span></p>
+        <p class="lh-lg">{{ post.data.description }}
+        </p>
+        
+        <a href="{{ post.url }}" class="btn btn-outline-success">See More</a>
+      </div>
+
+      
+      
+    </div>
+    <hr class="product-hr">
+
+        {%- endfor -%}
+        </div>

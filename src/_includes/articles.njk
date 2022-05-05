@@ -1,0 +1,32 @@
+---
+layout: base.njk
+
+---
+<div class="container-fluid shadow mb-3" style="
+  min-height: 12vh;
+  background: #064635 ;
+">
+</div>
+
+<div class="container">
+<article>
+
+  <header>
+    <h1 class="mt-5">{{ title }}</h1>
+  <p class="snippet__meta">by <span>{{ author }}</span> on <span>{{ date | postDate }}</span></p>
+  </header>
+
+  <figure>
+<img class="img-fluid article-image" src="{{ image }}" alt="">
+  </figure>
+<figcaption class="figure-caption">{{ figCaption }}</figcaption>
+</article>
+
+
+</div>
+
+
+<div class="container mt-3">
+  
+  {{ content | safe }}
+</div>
