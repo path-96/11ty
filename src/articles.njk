@@ -13,6 +13,8 @@ layout: base.njk
 
 <div class="container mt-5">
 
+<h1 style="color: #519259; text-align:center;">Recent Articles</h1>
+
     {%- for post in collections.post | reverse -%}
 
         <div class="row text-start align-items-center gy-5 my-4">
@@ -24,7 +26,7 @@ layout: base.njk
 
 
       <div class="col-12 col-md-9">
-        <h1 class="mb-3" style="color: #519259;">{{ post.data.title }}</h1>
+        <h1 class="mb-3">{{ post.data.title }}</h1>
         <p class="mb-4 snippet__meta">by <span>{{post.data.author}}</span> on <span>{{ post.date | postDate }}</span></p>
         <p class="lh-lg">{{ post.data.description }}
         </p>
