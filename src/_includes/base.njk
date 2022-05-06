@@ -73,10 +73,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
   <script type="text/javascript" src="/app.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
+function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "yeminhtet32@gmail.com",
+    Password : "YeminhteT5696",
+    To : 'ymhtet96@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Order Arrived!",
+    Body : "Name: "+ document.getElementById("name").value
+    +"<br> Email "+ document.getElementById("email").value
+    +"<br> Phone no: "+ document.getElementById("phone").value
+    +"<br> Message: "+ document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);}
+
+
     if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
@@ -101,20 +118,7 @@
     })
 
 
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "ymhtet96@gmail.com",
-    Password : "YeminhteT5696",
-    To : 'ymhtet96@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "Order Arrived!",
-    Body : "Name: "+ document.getElementById("name").value
-    +"<br> Email "+ document.getElementById("email").value
-    +"<br> Phone no: "+ document.getElementById("phone").value
-    +"<br> Message: "+ document.getElementById("message").value
-}).then(
-  message => alert("Message Sent Successfully")
-);
+  
 
   </script>
 

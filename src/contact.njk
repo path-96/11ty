@@ -21,7 +21,7 @@ layout: base.njk
         </div>
         <br>
         <div class="contact-form">
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form method="post">
             <div class="md-form mb-3">
                             <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
                         </div>
@@ -37,7 +37,7 @@ layout: base.njk
                             <textarea type="text" id="message" name="message" cols="30" rows="10" placeholder="Message" required class="form-control md-textarea"></textarea>
                         </div>
 
-              <button type="submit" class="btn btn-success">Send</button>
+              <input type="button" value="Send" class="btn btn-success" onclick="sendEmail()"/>
           </form>
         </div>
       </div>
