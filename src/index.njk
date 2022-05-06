@@ -10,16 +10,14 @@ layout: base.njk
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-text">Art of Gardening</h1>
+        <p class="container-fluid mt-3 mb-5 lh-lg" style="font-weight: lighter; font-size : 20px;"><i class="fa-solid fa-quote-left"></i> To plant a garden is to believe in tomorrow. <i class="fa-solid fa-quote-right"></i></p>
         <p class="lh-lg">သစ်ပင် ပန်းပင်စိုက်ရတာ ဝါသနာတူတဲ့
           အပင်ချစ်သူ မိတ်ဆွေများအတွက်
           လက်လှမ်းမှီသလောက် ပန်းပင် သစ်ပင်တွေ အကြောင်း
           စိုက်ပျိုး နည်းတွေအကြောင်း မျှဝေသွားမယ်.</p>
         <div class="row mt-4">
-          <div class="col-md-6 col-lg-6 col-sm-12 mb-3">
-            <a href="#products" class="btn btn-success btn-lg w-100">My Products</a>
-          </div>
-          <div class="col-md-6 col-lg-6 col-sm-12 mb-3">
-            <a href="/articles" class="btn btn-outline-success text-white btn-lg w-100">Articles</a>
+          <div class="col-md-12 col-lg-12 col-sm-12 mb-3">
+            <a href="/articles" class="btn btn-outline-success text-white btn-lg w-50">Articles</a>
           </div>
           <div class="col-md-12 col-lg-12 col-sm-12 mb-3">
             <a href="#About"><i class="fa-solid fa-angle-down fa-2xl fa-fade"></i></a>
@@ -34,18 +32,19 @@ layout: base.njk
   <!-- About Section -->
   <div class="about-header mt-0 mb-5" id="About">
     <h2><span style="color: #C0A080">Green Earth</span> ဘာလဲ ဘယ်လဲ?</h2>
-    <p class="container mt-3 mb-5 lh-lg" style="font-weight: lighter; font-size : 20px;"><i class="fa-solid fa-quote-left"></i> An addicition to gardening is not all bad when
-      you consider all the other choices in life. <i class="fa-solid fa-quote-right"></i></p>
       <!-- Products Discription -->
   {% include 'products-discription.njk' %}
-    <a href="#" class="btn btn btn-outline-light btn-lg mt-3">Contact Me</a>
+    <div class="container">
+            <a href="/contact" class="btn btn-outline-light btn-lg w-80 mx-3">Contact Me</a>
+            <a href="/products" class="btn btn-success text-white btn-lg w-80 mx-3">My Products</a>
+        </div>
   </div>
 
 
 
 
   <!-- My Products -->
-  {% include 'products.njk' %}
+  {% include 'product-carousel.njk' %}
 
   <!-- Features -->
 

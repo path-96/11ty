@@ -47,7 +47,7 @@ footer {
 
 .product-hero {
   min-height: 50vh;
-  background: rgba(0, 0, 0, 0.7)url('/assets/images/banner-product.jpg') center center no-repeat;
+  background: rgba(0, 0, 0, 0.7)url('/assets/images/banner-product.jpeg') center center no-repeat;
   background-size: cover;
   position: relative;
   background-blend-mode: darken;
@@ -76,8 +76,8 @@ footer {
 }
 
 .articles-hero {
-  min-height: 20vh;
-  background: #064635;
+  min-height: 50vh;
+  background: rgba(0, 0, 0, 0.7)url('/assets/images/banner-articles.jpeg') center center no-repeat;
   background-size: cover;
   position: relative;
   background-blend-mode: darken;
@@ -249,15 +249,6 @@ text-shadow: 1px 1px 10px black;
 }
 
 
-
-
-
-.card img {
-
-  height: 280px;
-}
-
-
 .snippet {
   display: grid;
   gap: 1em;
@@ -278,6 +269,16 @@ text-shadow: 1px 1px 10px black;
   color: rgb(77, 77, 77);
 }
 
-.article-image{
-  
+
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: 1rem; }
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
