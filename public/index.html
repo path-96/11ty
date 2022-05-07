@@ -269,24 +269,7 @@
   </script>
   
   <script type="text/javascript" src="/app.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
-function sendEmail(){
-    Email.send({
-    Host : "smtp.gmail.com",
-    Username : "yeminhtet32@gmail.com",
-    Password : "YeminhteT5696",
-    To : 'ymhtet96@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "Order Arrived!",
-    Body : "Name: "+ document.getElementById("name").value
-    +"<br> Email "+ document.getElementById("email").value
-    +"<br> Phone no: "+ document.getElementById("phone").value
-    +"<br> Message: "+ document.getElementById("message").value
-}).then(
-  message => alert("Message Sent Successfully")
-);}
-
 
     if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
